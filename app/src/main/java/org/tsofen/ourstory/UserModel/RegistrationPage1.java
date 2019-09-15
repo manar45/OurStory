@@ -52,6 +52,25 @@ public class RegistrationPage1 extends AppCompatActivity {
         TextViewInvs3 = findViewById(R.id.emptyView3);
         TextViewInvs4 = findViewById(R.id.emptyView4);
         TextViewInvs5 = findViewById(R.id.emptyView5);
+        Intent currIntent = getIntent();
+        emailString = currIntent.getStringExtra("email");
+        firstNameString = currIntent.getStringExtra("first_name");
+        lastNameString = currIntent.getStringExtra("last_name");
+        passwordString = currIntent.getStringExtra("password");
+        Log.d("log4", "values received from registrationPage1:"
+                + emailString + " " + firstNameString + " "
+                + lastNameString + " " + passwordString);
+        EditText1 = findViewById(R.id.showEmail);
+        EditText2 = findViewById(R.id.showFirst);
+        EditText3 = findViewById(R.id.showLast);
+        EditText4 = findViewById(R.id.password_editText);
+        EditText5 = findViewById(R.id.repeatpassword_editText);
+        EditText1.setText(emailString);
+        EditText2.setText(firstNameString);
+        EditText3.setText(lastNameString);
+        EditText4.setText(passwordString);
+        EditText5.setText(passwordString);
+
 
     }
 

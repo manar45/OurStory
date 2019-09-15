@@ -152,7 +152,19 @@ public class RegistrationPage2 extends AppCompatActivity {
 
 
     public void closeActivity(View view) {
-        Intent back = new Intent(this, LogIn.class);
+        Intent back = new Intent(this, RegistrationPage1.class);
+        back.putExtra("email", emailString);
+        back.putExtra("first_name", firstNameString);
+        back.putExtra("last_name", lastNameString);
+        back.putExtra("password", passwordString);
+        back.putExtra("state", stateString);
+        back.putExtra("city", cityString);
+        back.putExtra("dateOfBirth", dateOfBirth);
+        back.putExtra("gender", gender);
+
+        Log.d("log-not saved", "values sent to registrationPage1:"
+                + emailString + " " + firstNameString + " "
+                + lastNameString + " " + passwordString + " " + stateString + " " + cityString + " " + dateOfBirth + " " + gender);
         startActivity(back);
     }
 
